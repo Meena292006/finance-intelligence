@@ -1,0 +1,6 @@
+txn_id,user_id,amount,category,merchant,timestamp
+1,u1,120,Food,Tea Shop,2024-01-01 09:00:00
+2,u1,350,Food,Swiggy,2024-01-01 12:30:00
+3,u1,900,Shopping,Amazon,2024-01-01 15:00:00
+4,u1,420,Food,Zomato,2024-01-01 21:00:00
+5,u1,1500,Entertainment,BookMyShow,2024-01-01 22:30:00
