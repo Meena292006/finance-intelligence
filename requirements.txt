@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 fastapi
 uvicorn
 python-dotenv
 google-generativeai
+=======
+numpy==2.4.2
+pandas==3.0.0
+pathway==0.post1
+python-dateutil==2.9.0.post0
+six==1.17.0
+tzdata==2025.3
+>>>>>>> 4d79eb45014536949b16abfa078e16aba92c86c1

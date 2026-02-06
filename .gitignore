@@ -1,0 +1,30 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn.lock
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+
+# ML / Data
+data/
+datasets/
+*.csv
+*.h5
+*.pkl
+*.joblib
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db

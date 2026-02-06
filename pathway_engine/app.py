@@ -1,4 +1,5 @@
 import pathway as pw
+<<<<<<< HEAD
 import time
 
 from pathway_engine.features import compute_spending_features
@@ -36,3 +37,21 @@ pw.run(blocking=False)
 
 while True:
     time.sleep(1)
+=======
+
+from ingestion.simulated_stream import ingest
+from features.spending_features import spending_features
+from models.anomaly_rules import detect_anomaly
+from memory.memory_updater import update
+from triggers.alert_triggers import alert_if
+
+txns = ingest()
+update(txns)
+
+features = spending_features(txns)
+anomalies = detect_anomaly(features)
+alerts = alert_if(anomalies)
+
+pw.io.python.write(alerts, lambda r: print("🚨 ALERT:", r))
+pw.run()
+>>>>>>> 4d79eb45014536949b16abfa078e16aba92c86c1
