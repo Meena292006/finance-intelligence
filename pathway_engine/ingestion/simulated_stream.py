@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../..')
 import pathway as pw
 from data.generators.transaction_stream import stream
 

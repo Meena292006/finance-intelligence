@@ -1,14 +1,10 @@
-# Installation Plan for Libraries
+# Integration TODO
 
-## Steps to Complete:
-- [x] Create a virtual environment in the current directory
-- [x] Activate the virtual environment and install pandas and pathway
-- [x] Verify installation by checking installed packages
-- [x] Address pathway.xpacks.llm import issue by installing real Pathway package
-
-## Dependent Files to be edited:
-- None
-
-## Followup steps:
-- Test the application to ensure libraries work correctly
-- Note: The installed pathway package is a placeholder. To use the full features, including xpacks.llm, obtain the real Pathway package from https://pathway.com/developers/
+- [x] Update api_gateway/routes/insights.py to compute stats and return recent transactions
+- [x] Update frontend/src/api/chatApi.js to send "message" key
+- [x] Update api_gateway/routes/chat.py to load CSV and include transaction context
+- [x] Update api_gateway/routes/alerts.py to return sample alerts based on transactions
+- [ ] Run backend with uvicorn
+- [ ] Run frontend with npm run dev
+- [ ] Test APIs with test_api.py
+- [ ] Verify chatbot responds with transaction insights

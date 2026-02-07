@@ -10,13 +10,6 @@ __pycache__/
 venv/
 .env
 
-# ML / Data
-data/
-datasets/
-*.csv
-*.h5
-*.pkl
-*.joblib
 
 # Jupyter
 .ipynb_checkpoints/
