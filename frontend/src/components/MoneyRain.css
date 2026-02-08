@@ -1,0 +1,91 @@
+.money-rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    /* Changed from -1 to 0 */
+    overflow: hidden;
+}
+
+.money-note {
+    position: absolute;
+    top: -100px;
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.2) 0%, rgba(21, 101, 192, 0.15) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    animation: fall linear infinite;
+    overflow: hidden;
+    backdrop-filter: blur(1px);
+}
+
+.money-note::before {
+    content: '₹';
+}
+
+/* Shimmer effect */
+.money-note::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shimmer 5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 200%;
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg) scale(0.9);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.6;
+    }
+
+    85% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg) translateX(50px) scale(1.1);
+        opacity: 0;
+    }
+}
+
+.money-note:nth-child(2n) {
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.2) 0%, rgba(25, 118, 210, 0.1) 100%);
+    width: 70px;
+    height: 35px;
+}
+
+.money-note:nth-child(3n) {
+    animation-duration: 18s !important;
+}
+
+.money-note:nth-child(4n) {
+    animation-duration: 22s !important;
+}
