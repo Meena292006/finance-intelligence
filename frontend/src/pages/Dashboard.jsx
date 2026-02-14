@@ -8,7 +8,7 @@ import {
 } from 'recharts';
 import { ArrowUpRight, TrendingUp } from 'lucide-react';
 
-export default function Dashboard() {
+export default function Dashboard({ setPage }) {
   const { stats, transactions, trend, categories } = useLiveData();
 
   const COLORS = ['#3d7eff', '#9d50ff', '#00d2ff', '#fbbf24', '#f43f5e'];
@@ -16,7 +16,7 @@ export default function Dashboard() {
   return (
     <div className="dashboard-wrapper" style={{ position: 'relative' }}>
       <MoneyRain count={5} />
-      <TopNav title="Product Sales Dashboard" />
+      <TopNav title="Product Sales Dashboard" onCalendarClick={() => setPage('calendar')} />
 
       <div className="dashboard-grid">
         {/* Column 1: AI Assistant */}

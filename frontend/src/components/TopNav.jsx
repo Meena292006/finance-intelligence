@@ -1,12 +1,12 @@
 import { Bell, MessageSquare, Calendar as CalendarIcon } from 'lucide-react';
 
-export default function TopNav({ title }) {
+export default function TopNav({ title, onCalendarClick }) {
     return (
         <nav className="top-nav">
             <h1>{title}</h1>
 
             <div className="nav-icons">
-                <div className="icon-btn">
+                <div className="icon-btn" onClick={onCalendarClick} style={{ cursor: 'pointer' }}>
                     <CalendarIcon size={20} />
                 </div>
                 <div className="icon-btn">
