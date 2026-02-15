@@ -11,14 +11,22 @@ export default function Calendar() {
     const [view, setView] = useState('month'); // 'day', 'week', 'month'
     const [selectedDates, setSelectedDates] = useState([]);
     const [isDragging, setIsDragging] = useState(false);
-    const [budgets, setBudgets] = useState({});
-    const [expenses, setExpenses] = useState({});
+
+    // Load from local storage
+    const [budgets, setBudgets] = useState(() => JSON.parse(localStorage.getItem('calendar_budgets')) || {});
+    const [expenses, setExpenses] = useState(() => JSON.parse(localStorage.getItem('calendar_expenses')) || {});
+    const [budgetRules, setBudgetRules] = useState(() => JSON.parse(localStorage.getItem('calendar_rules')) || []);
+
     const [showDateModal, setShowDateModal] = useState(false);
     const [selectedDateForDetail, setSelectedDateForDetail] = useState(null);
     const [showBudgetModal, setShowBudgetModal] = useState(false);
-    const [budgetRules, setBudgetRules] = useState([]);
     const [alerts, setAlerts] = useState([]);
     const [showAIPanel, setShowAIPanel] = useState(true);
+
+    // Save to local storage
+    useEffect(() => localStorage.setItem('calendar_budgets', JSON.stringify(budgets)), [budgets]);
+    useEffect(() => localStorage.setItem('calendar_expenses', JSON.stringify(expenses)), [expenses]);
+    useEffect(() => localStorage.setItem('calendar_rules', JSON.stringify(budgetRules)), [budgetRules]);
 
     // Generate calendar days
     const calendarDays = useMemo(() => {
@@ -40,15 +48,15 @@ export default function Calendar() {
         return days;
     }, [currentDate]);
 
-    // Simulate real-time expense data
+    // Simulate real-time expense data (Slower & Realistic)
     useEffect(() => {
         const interval = setInterval(() => {
             const today = new Date().toDateString();
             setExpenses(prev => ({
                 ...prev,
-                [today]: (prev[today] || 0) + Math.floor(Math.random() * 500)
+                [today]: (prev[today] || 0) + Math.floor(Math.random() * 50) + 10 // Add ₹10-60
             }));
-        }, 5000);
+        }, 15000); // Every 15 seconds
 
         return () => clearInterval(interval);
     }, []);

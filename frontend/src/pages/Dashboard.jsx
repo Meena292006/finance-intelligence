@@ -37,7 +37,9 @@ export default function Dashboard({ setPage }) {
               backdropFilter: 'blur(8px)',
               cursor: 'pointer',
               border: '1px solid rgba(255,255,255,0.1)'
-            }}>
+            }}
+              onClick={() => setPage('chat')}
+            >
               Try Now
             </div>
           </div>
