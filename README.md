@@ -1,46 +1,44 @@
-#💰 Finance Intelligence System
-📌 Overview
+💰🚀 Finance Intelligence System
+AI-Powered Financial Analytics, Budgeting & Smart Planning
 
-Finance Intelligence System is an AI-powered financial analytics platform that combines data processing, machine learning, and Large Language Models (LLMs) to generate intelligent insights from financial data. It enables natural language interaction, trend analysis, and decision support.
+An intelligent finance platform combining LLMs, real-time analytics, budgeting, and calendar-based planning for smarter financial decisions.
 
-🎯 Objectives
+🌟 Overview
 
-Analyze structured financial datasets efficiently
+Finance Intelligence System is an AI-driven financial management and analytics platform that integrates real-time data pipelines, machine learning, LLM-powered insights, budget tracking, and calendar-based financial planning.
 
-Generate intelligent insights using LLMs
+It enables users to analyze financial data, manage budgets, plan expenses over time, and interact with their finances using natural language queries.
 
-Enable natural language queries on financial data
+🔥 Key Features
 
-Provide predictive and analytical decision support
+🧠 LLM-Powered Financial Insights (Ollama)
+⚡ Real-Time Data Processing using Pathway
+📊 Trend Analysis & Forecasting with ML
+💬 Natural Language Querying of financial data
+💸 Budget Management System (income, expenses, limits)
+🗓️ Calendar Planner for scheduled expenses & financial goals
+📈 Interactive Visual Analytics & Reports
+🔍 Explainable AI-based Decision Support
 
-🚀 Features
-
-Financial data ingestion and preprocessing
-
-Real-time data pipelines using Pathway
-
-Machine learning-based trend and pattern analysis
-
-LLM-powered financial insight generation
-
-Natural language querying of financial data
-
-Automated summaries and explanations of analytics
-
-Interactive visual analysis support
-
+🏗️ System Architecture
+Financial Data  
+      ↓  
+Pathway Pipelines  
+      ↓  
+ML Analysis & Forecasting  
+      ↓  
+Ollama LLM (Insights & Queries)  
+      ↓  
+Budget Manager + Calendar Planner  
+      ↓  
+Smart Financial Decisions
 🛠️ Tech Stack
-
-Programming Language: Python
-
-Data Processing: Pandas, NumPy
-
-Streaming & Pipelines: Pathway
-
-LLM Integration: Ollama (Local LLMs)
-
-AI/ML: Scikit-learn
-
-Visualization: Matplotlib / Seaborn
-
-Data Source: CSV / structured financial datasets
+Category	Technology
+Language	Python
+Data Processing	Pandas, NumPy
+Streaming Engine	Pathway
+Machine Learning	Scikit-learn
+LLM Integration	Ollama (Local LLMs)
+Visualization	Matplotlib, Seaborn
+Planning Modules	Budget Tracker, Calendar Planner
+Data Source	Structured Financial Datasets (CSV)
